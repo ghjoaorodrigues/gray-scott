@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 
-OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
+OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output" / "julia"
 MANIFEST = OUTPUT_DIR / "manifest.csv"
 
 

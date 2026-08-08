@@ -1,5 +1,3 @@
-import time
-
 import numpy as np
 
 def laplacian(X):
@@ -34,22 +32,3 @@ def simulate(N, steps, F, k):
         V += dt * (Dv * Lv + reaction - (F + k) * V)
 
     return V
-
-def benchmark(N=256, steps=5000, F=0.060, k=0.062, repeats=3):
-    simulate(N, steps, F, k) # discard warm-up round
-
-    times = []
-    for _ in range(repeats):
-        t0 = time.perf_counter()
-        simulate(N, steps, F, k)
-        times.append(time.perf_counter() - t0)
-
-    best = min(times)
-    print(f"NumPy simulate(N={N}, steps={steps}): best of {repeats} = {best:.3f}s "
-          f"(all: {[f'{t:.3f}' for t in times]})")
-
-    return best
-
-if __name__== "__main__":
-    print("Benchmarking...")
-    benchmark()

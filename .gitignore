@@ -1,2 +1,8 @@
+# Results
 output/
+
+# Environment
 venv/
+
+# Python
+__pycache__/

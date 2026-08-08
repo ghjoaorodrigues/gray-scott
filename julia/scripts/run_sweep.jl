@@ -11,7 +11,7 @@ const F_VALUES = range(0.030, 0.062, length=4)
 const K_VALUES = range(0.055, 0.065, length=4)
 
 # gray-scott/output/
-const OUTDIR = joinpath(@__DIR__, "..", "..", "output")
+const OUTDIR = joinpath(@__DIR__, "..", "..", "output", "julia")
 isdir(OUTDIR) || mkpath(OUTDIR)
 
 function main()
