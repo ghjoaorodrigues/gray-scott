@@ -12,7 +12,7 @@ N, STEPS = 256, 5000
 F_VALUES = np.linspace(0.030, 0.062, 4)
 K_VALUES = np.linspace(0.055, 0.065, 4)
 
-OUTDIR = Path(__file__).resolve().parent.parent.parent / "output" / "numpy"
+OUTDIR = Path(__file__).resolve().parent.parent.parent / "output" / "python"
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 

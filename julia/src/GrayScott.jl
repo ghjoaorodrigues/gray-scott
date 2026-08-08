@@ -23,7 +23,7 @@ function simulate(N::Int, steps::Int, F::Float64, k::Float64)
 
 
     for step in 1:steps
-        for j in 1:N, i in 1:N
+        @inbounds for j in 1:N, i in 1:N
             #neighbours
             ip1 = mod1(i + 1, N)
             im1 = mod1(i - 1, N)
